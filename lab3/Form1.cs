@@ -7,10 +7,6 @@ namespace lab3
             InitializeComponent();
         }
 
-        private void calcBtn_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void clearBtn_Click(object sender, EventArgs e)
         {
@@ -25,6 +21,8 @@ namespace lab3
         private void calcBtn_Click(object sender, EventArgs e)
         {
             float a = 5;
+            float b = 6;
+            float c = 1;
         }
     }
 }

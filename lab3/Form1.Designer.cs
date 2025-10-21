@@ -45,7 +45,7 @@
             calcBtn.Name = "calcBtn";
             calcBtn.Size = new Size(75, 23);
             calcBtn.TabIndex = 0;
-            calcBtn.Text = "button1";
+            calcBtn.Text = "Oblicz";
             calcBtn.UseVisualStyleBackColor = true;
             // 
             // clearBtn
@@ -54,7 +54,7 @@
             clearBtn.Name = "clearBtn";
             clearBtn.Size = new Size(75, 23);
             clearBtn.TabIndex = 1;
-            clearBtn.Text = "button2";
+            clearBtn.Text = "Wyczyść";
             clearBtn.UseVisualStyleBackColor = true;
             // 
             // storageTbox

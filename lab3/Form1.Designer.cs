@@ -47,6 +47,7 @@
             calcBtn.TabIndex = 0;
             calcBtn.Text = "Oblicz";
             calcBtn.UseVisualStyleBackColor = true;
+            calcBtn.Click += calcBtn_Click;
             // 
             // clearBtn
             // 
@@ -56,6 +57,7 @@
             clearBtn.TabIndex = 1;
             clearBtn.Text = "Wyczyść";
             clearBtn.UseVisualStyleBackColor = true;
+            clearBtn.Click += clearBtn_Click;
             // 
             // storageTbox
             // 

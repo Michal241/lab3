@@ -20,6 +20,7 @@ namespace lab3
 
         private void calcBtn_Click(object sender, EventArgs e)
         {
+<<<<<<< HEAD
             double pojemnoscNaczynia = double.Parse(storageTbox.Text);
             double zawartoscSubstancji = double.Parse(liquidTbox.Text);
             double iloscNaczyn = double.Parse(countTbox.Text);
@@ -28,6 +29,11 @@ namespace lab3
 
 
 
+=======
+            float a = 5;
+            float b = 6;
+            float c = 1;
+>>>>>>> 7cc836587039c9d0176a020ffb5b77794b6544b5
         }
     }
 }

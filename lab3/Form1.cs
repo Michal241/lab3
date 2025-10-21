@@ -21,5 +21,10 @@ namespace lab3
             liquidCbox.SelectedIndex = default;
             res2Tbox.Text = "";
         }
+
+        private void calcBtn_Click(object sender, EventArgs e)
+        {
+            float a = 5;
+        }
     }
 }

@@ -12,7 +12,7 @@ namespace lab3
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
             Application.Run(new Form1());
-            //TestProgramowy
+            //TestProgramowy1241254125151
         }
     }
 }

@@ -20,11 +20,42 @@ namespace lab3
 
         private void calcBtn_Click(object sender, EventArgs e)
         {
-            double pojemnoscNaczynia = double.Parse(storageTbox.Text);
-            double zawartoscSubstancji = double.Parse(liquidTbox.Text);
-            double iloscNaczyn = double.Parse(countTbox.Text);
-            double lacznaObjetosc = double.Parse(resTbox.Text);
-            double objetoscCzystejSubstancji = double.Parse(res2Tbox.Text);
+            double pojemnoscNaczynia, zawartoscSubstancji, iloscNaczyn, lacznaObjetosc, objetoscCzystejSubstancji;
+
+            if (!double.TryParse(storageTbox.Text, out pojemnoscNaczynia))
+            {
+                MessageBox.Show("Pole 'Pojemnoœæ naczynia' zawiera nieprawid³ow¹ wartoœæ.\nProszê wpisz liczbê.",
+                                "B³¹d wprowadzania danych", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            if (!double.TryParse(liquidTbox.Text, out zawartoscSubstancji))
+            {
+                MessageBox.Show("Pole 'Zawartoœæ substancji' zawiera nieprawid³ow¹ wartoœæ.\nProszê wpisz liczbê.",
+                                "B³¹d wprowadzania danych", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            if (!double.TryParse(countTbox.Text, out iloscNaczyn))
+            {
+                MessageBox.Show("Pole 'Iloœæ naczyñ' zawiera nieprawid³ow¹ wartoœæ.\nProszê wpisz liczbê ca³kowit¹ lub dziesiêtn¹.",
+                                "B³¹d wprowadzania danych", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            if (!double.TryParse(resTbox.Text, out lacznaObjetosc))
+            {
+                MessageBox.Show("Pole '£¹czna objêtoœæ' zawiera nieprawid³ow¹ wartoœæ.\nProszê wpisz liczbê.",
+                                "B³¹d wprowadzania danych", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            if (!double.TryParse(res2Tbox.Text, out objetoscCzystejSubstancji))
+            {
+                MessageBox.Show("Pole 'Objêtoœæ czystej substancji' zawiera nieprawid³ow¹ wartoœæ.\nProszê wpisz liczbê.",
+                                "B³¹d wprowadzania danych", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
         }
     }
 }

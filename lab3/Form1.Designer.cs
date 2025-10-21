@@ -56,6 +56,7 @@
             clearBtn.TabIndex = 1;
             clearBtn.Text = "Wyczyść";
             clearBtn.UseVisualStyleBackColor = true;
+            clearBtn.Click += clearBtn_Click;
             // 
             // storageTbox
             // 

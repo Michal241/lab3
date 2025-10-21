@@ -6,5 +6,15 @@ namespace lab3
         {
             InitializeComponent();
         }
+
+        private void clearBtn_Click(object sender, EventArgs e)
+        {
+            storageTbox.Text = "";
+            liquidTbox.Text = "";
+            countTbox.Text = "";
+            storageCbox.SelectedIndex = default;
+            liquidCbox.SelectedIndex = default;
+            res2Tbox.Text = "";
+        }
     }
 }

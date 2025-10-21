@@ -10,12 +10,12 @@ namespace lab3
 
         private void clearBtn_Click(object sender, EventArgs e)
         {
-            storageTbox.Text = "";
-            liquidTbox.Text = "";
-            countTbox.Text = "";
-            storageCbox.SelectedIndex = default;
-            liquidCbox.SelectedIndex = default;
-            res2Tbox.Text = "";
+            storageTbox.Clear();
+            liquidTbox.Clear();
+            countTbox.Clear();
+            storageCbox.SelectedIndex = -1;
+            liquidCbox.SelectedIndex = -1;
+            res2Tbox.Clear();
         }
 
         private void calcBtn_Click(object sender, EventArgs e)

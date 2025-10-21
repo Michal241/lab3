@@ -28,55 +28,118 @@
         /// </summary>
         private void InitializeComponent()
         {
-            button1 = new Button();
-            button2 = new Button();
-            button3 = new Button();
+            calcBtn = new Button();
+            clearBtn = new Button();
+            storageTbox = new TextBox();
+            liquidTbox = new TextBox();
+            countTbox = new TextBox();
+            resTbox = new TextBox();
+            res2Tbox = new TextBox();
+            storageCbox = new ComboBox();
+            liquidCbox = new ComboBox();
             SuspendLayout();
             // 
-            // button1
+            // calcBtn
             // 
-            button1.Location = new Point(329, 201);
-            button1.Name = "button1";
-            button1.Size = new Size(75, 23);
-            button1.TabIndex = 0;
-            button1.Text = "button1";
-            button1.UseVisualStyleBackColor = true;
+            calcBtn.Location = new Point(472, 137);
+            calcBtn.Name = "calcBtn";
+            calcBtn.Size = new Size(75, 23);
+            calcBtn.TabIndex = 0;
+            calcBtn.Text = "button1";
+            calcBtn.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // clearBtn
             // 
-            button2.Location = new Point(472, 201);
-            button2.Name = "button2";
-            button2.Size = new Size(75, 23);
-            button2.TabIndex = 1;
-            button2.Text = "button2";
-            button2.UseVisualStyleBackColor = true;
+            clearBtn.Location = new Point(570, 137);
+            clearBtn.Name = "clearBtn";
+            clearBtn.Size = new Size(75, 23);
+            clearBtn.TabIndex = 1;
+            clearBtn.Text = "button2";
+            clearBtn.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // storageTbox
             // 
-            button3.Location = new Point(396, 276);
-            button3.Name = "button3";
-            button3.Size = new Size(75, 23);
-            button3.TabIndex = 2;
-            button3.Text = "button3";
-            button3.UseVisualStyleBackColor = true;
+            storageTbox.Location = new Point(43, 31);
+            storageTbox.Name = "storageTbox";
+            storageTbox.Size = new Size(100, 23);
+            storageTbox.TabIndex = 2;
+            // 
+            // liquidTbox
+            // 
+            liquidTbox.Location = new Point(43, 74);
+            liquidTbox.Name = "liquidTbox";
+            liquidTbox.Size = new Size(100, 23);
+            liquidTbox.TabIndex = 3;
+            // 
+            // countTbox
+            // 
+            countTbox.Location = new Point(43, 103);
+            countTbox.Name = "countTbox";
+            countTbox.Size = new Size(100, 23);
+            countTbox.TabIndex = 4;
+            // 
+            // resTbox
+            // 
+            resTbox.Location = new Point(43, 240);
+            resTbox.Name = "resTbox";
+            resTbox.Size = new Size(100, 23);
+            resTbox.TabIndex = 5;
+            // 
+            // res2Tbox
+            // 
+            res2Tbox.Location = new Point(43, 290);
+            res2Tbox.Name = "res2Tbox";
+            res2Tbox.Size = new Size(100, 23);
+            res2Tbox.TabIndex = 6;
+            // 
+            // storageCbox
+            // 
+            storageCbox.FormattingEnabled = true;
+            storageCbox.Items.AddRange(new object[] { "Kieliszek (50ml)", "Szklanka (250ml)", "Butelka (500 ml)", "Dzbanek (800ml)" });
+            storageCbox.Location = new Point(43, 153);
+            storageCbox.Name = "storageCbox";
+            storageCbox.Size = new Size(121, 23);
+            storageCbox.TabIndex = 7;
+            // 
+            // liquidCbox
+            // 
+            liquidCbox.FormattingEnabled = true;
+            liquidCbox.Items.AddRange(new object[] { "Wódka (40%)", "Spirytus (96%)", "Płyn Lugola (5%)", "Ocet (10%)" });
+            liquidCbox.Location = new Point(43, 182);
+            liquidCbox.Name = "liquidCbox";
+            liquidCbox.Size = new Size(121, 23);
+            liquidCbox.TabIndex = 8;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
-            Controls.Add(button3);
-            Controls.Add(button2);
-            Controls.Add(button1);
+            Controls.Add(liquidCbox);
+            Controls.Add(storageCbox);
+            Controls.Add(res2Tbox);
+            Controls.Add(resTbox);
+            Controls.Add(countTbox);
+            Controls.Add(liquidTbox);
+            Controls.Add(storageTbox);
+            Controls.Add(clearBtn);
+            Controls.Add(calcBtn);
             Name = "Form1";
             Text = "Form1";
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
 
-        private Button button1;
-        private Button button2;
-        private Button button3;
+        private Button calcBtn;
+        private Button clearBtn;
+        private TextBox storageTbox;
+        private TextBox liquidTbox;
+        private TextBox countTbox;
+        private TextBox resTbox;
+        private TextBox res2Tbox;
+        private ComboBox storageCbox;
+        private ComboBox liquidCbox;
     }
 }

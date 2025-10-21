@@ -47,6 +47,7 @@
             calcBtn.TabIndex = 0;
             calcBtn.Text = "Oblicz";
             calcBtn.UseVisualStyleBackColor = true;
+            calcBtn.Click += calcBtn_Click;
             // 
             // clearBtn
             // 

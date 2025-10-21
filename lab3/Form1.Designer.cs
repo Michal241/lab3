@@ -85,7 +85,7 @@
             // 
             // resTbox
             // 
-            resTbox.Location = new Point(664, 63);
+            resTbox.Location = new Point(642, 63);
             resTbox.Name = "resTbox";
             resTbox.ReadOnly = true;
             resTbox.Size = new Size(100, 23);
@@ -93,7 +93,7 @@
             // 
             // res2Tbox
             // 
-            res2Tbox.Location = new Point(664, 92);
+            res2Tbox.Location = new Point(642, 92);
             res2Tbox.Name = "res2Tbox";
             res2Tbox.ReadOnly = true;
             res2Tbox.Size = new Size(100, 23);
@@ -147,7 +147,7 @@
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(486, 63);
+            label4.Location = new Point(542, 63);
             label4.Name = "label4";
             label4.Size = new Size(94, 15);
             label4.TabIndex = 12;

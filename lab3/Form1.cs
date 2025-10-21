@@ -20,9 +20,11 @@ namespace lab3
 
         private void calcBtn_Click(object sender, EventArgs e)
         {
-            float a = 5;
-            float b = 6;
-            float c = 1;
+            double pojemnoscNaczynia = double.Parse(storageTbox.Text);
+            double zawartoscSubstancji = double.Parse(liquidTbox.Text);
+            double iloscNaczyn = double.Parse(countTbox.Text);
+            double lacznaObjetosc = double.Parse(resTbox.Text);
+            double objetoscCzystejSubstancji = double.Parse(res2Tbox.Text);
         }
     }
 }

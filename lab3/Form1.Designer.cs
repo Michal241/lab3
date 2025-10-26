@@ -71,6 +71,7 @@
             storageTbox.Name = "storageTbox";
             storageTbox.Size = new Size(100, 23);
             storageTbox.TabIndex = 3;
+            storageTbox.TextChanged += storageTbox_TextChanged;
             // 
             // liquidTbox
             // 
@@ -78,6 +79,7 @@
             liquidTbox.Name = "liquidTbox";
             liquidTbox.Size = new Size(100, 23);
             liquidTbox.TabIndex = 4;
+            liquidTbox.TextChanged += liquidTbox_TextChanged_1;
             // 
             // countTbox
             // 
@@ -85,6 +87,7 @@
             countTbox.Name = "countTbox";
             countTbox.Size = new Size(100, 23);
             countTbox.TabIndex = 5;
+            countTbox.TextChanged += countTbox_TextChanged;
             // 
             // res1Box
             // 
@@ -109,6 +112,7 @@
             storageCbox.Name = "storageCbox";
             storageCbox.Size = new Size(121, 23);
             storageCbox.TabIndex = 8;
+            storageCbox.SelectedIndexChanged += storageCbox_SelectedIndexChanged;
             // 
             // liquidCbox
             // 
@@ -117,6 +121,7 @@
             liquidCbox.Name = "liquidCbox";
             liquidCbox.Size = new Size(121, 23);
             liquidCbox.TabIndex = 9;
+            liquidCbox.SelectedIndexChanged += liquidCbox_SelectedIndexChanged;
             // 
             // label1
             // 

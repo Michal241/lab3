@@ -17,13 +17,15 @@ namespace lab3
 
             TypoweRoztwory = new Dictionary<string, double>()
             {
-                {"Wóka 40%", 40},
+                {"Wódka 40%", 40},
                 {"Spirytus 96%", 96},
                 {"P³yn lugola 5%", 5},
                 {"Ocet 10%", 10}
             };
             storageCbox.Items.AddRange(TypoweNaczynia.Keys.ToArray());
             liquidCbox.Items.AddRange(TypoweRoztwory.Keys.ToArray());
+            res1Box.Enabled = false;
+            res2Box.Enabled = false;
         }
 
         private void res2Box_TextChanged(object sender, EventArgs e)
@@ -46,10 +48,64 @@ namespace lab3
 
         private void calcBtn_Click(object sender, EventArgs e)
         {
-            double totalVolume = double.Parse(storageTbox.Text) * double.Parse(countTbox.Text);
+            double storageValue = 0;
+            double liquidPercentage = 0;
+            int count = 1;
+
+            
+            if (!string.IsNullOrEmpty(countTbox.Text))
+                count = int.Parse(countTbox.Text);
+
+          
+            if (storageCbox.SelectedItem != null)
+                storageValue = TypoweNaczynia[storageCbox.SelectedItem.ToString()];
+            else if (!string.IsNullOrEmpty(storageTbox.Text))
+                storageValue = double.Parse(storageTbox.Text);
+
+            
+            if (liquidCbox.SelectedItem != null)
+                liquidPercentage = TypoweRoztwory[liquidCbox.SelectedItem.ToString()];
+            else if (!string.IsNullOrEmpty(liquidTbox.Text))
+                liquidPercentage = double.Parse(liquidTbox.Text);
+
+            
+            double totalVolume = storageValue * count;
+            double percentageVolume = totalVolume * liquidPercentage / 100;
+
             res1Box.Text = totalVolume.ToString();
-            double percentageVolume = totalVolume * double.Parse(liquidTbox.Text)/100;
             res2Box.Text = percentageVolume.ToString();
+        }
+
+        private void storageTbox_TextChanged(object sender, EventArgs e)
+        {
+            storageCbox.SelectedItem = null;
+            liquidCbox.SelectedItem = null;
+        }
+
+
+        private void countTbox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void liquidTbox_TextChanged_1(object sender, EventArgs e)
+        {
+            storageCbox.SelectedItem = null;
+            liquidCbox.SelectedItem = null;
+        }
+
+        private void storageCbox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            storageTbox.Clear();
+            liquidTbox.Clear();
+            countTbox.Clear();
+        }
+
+        private void liquidCbox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            storageTbox.Clear();
+            liquidTbox.Clear();
+            countTbox.Clear();
         }
     }
 }

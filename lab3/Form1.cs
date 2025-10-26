@@ -6,5 +6,10 @@ namespace lab3
         {
             InitializeComponent();
         }
+
+        private void res2Box_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -52,6 +52,7 @@
             clearBtn.TabIndex = 1;
             clearBtn.Text = "Wyczyść";
             clearBtn.UseVisualStyleBackColor = true;
+            clearBtn.Click += clearBtn_Click;
             // 
             // calcBtn
             // 
@@ -61,6 +62,7 @@
             calcBtn.TabIndex = 2;
             calcBtn.Text = "Oblicz";
             calcBtn.UseVisualStyleBackColor = true;
+            calcBtn.Click += calcBtn_Click;
             // 
             // storageTbox
             // 
@@ -89,7 +91,6 @@
             res1Box.Name = "res1Box";
             res1Box.Size = new Size(100, 23);
             res1Box.TabIndex = 6;
-            res1Box.TextChanged += this.res1Box_TextChanged;
             // 
             // res2Box
             // 
@@ -110,7 +111,6 @@
             // 
             // liquidCbox
             // 
-            liquidCbox.AutoCompleteCustomSource.AddRange(new string[] { "Wódka (40%)", "Spirytus (96%)", "Płyn Lugola (5%)", "Ocet (10%)" });
             liquidCbox.FormattingEnabled = true;
             liquidCbox.Location = new Point(302, 78);
             liquidCbox.Name = "liquidCbox";

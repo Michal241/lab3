@@ -48,38 +48,76 @@ namespace lab3
 
         private void calcBtn_Click(object sender, EventArgs e)
         {
-            double storageValue = 0;
-            double liquidPercentage = 0;
-            int count = 1;
+            try
+            {
+                double storageValue = 0;
+                double liquidPercentage = 0;
+                int count = 1;
 
-            
-            if (!string.IsNullOrEmpty(countTbox.Text))
-                count = int.Parse(countTbox.Text);
+                if (!string.IsNullOrEmpty(countTbox.Text))
+                {
+                    if (!int.TryParse(countTbox.Text, out count))
+                    {
+                        MessageBox.Show("Niepoprawna liczba sztuk!");
+                        return;
+                    }
+                }
 
-          
-            if (storageCbox.SelectedItem != null)
-                storageValue = TypoweNaczynia[storageCbox.SelectedItem.ToString()];
-            else if (!string.IsNullOrEmpty(storageTbox.Text))
-                storageValue = double.Parse(storageTbox.Text);
+                if (storageCbox.SelectedItem != null)
+                {
+                    storageValue = TypoweNaczynia[storageCbox.SelectedItem.ToString()];
+                }
+                else if (!string.IsNullOrEmpty(storageTbox.Text))
+                {
+                    if (!double.TryParse(storageTbox.Text, out storageValue))
+                    {
+                        MessageBox.Show("Niepoprawna objêtoœæ naczynia!");
+                        return;
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("WprowadŸ objêtoœæ naczynia lub wybierz z listy!");
+                    return;
+                }
 
-            
-            if (liquidCbox.SelectedItem != null)
-                liquidPercentage = TypoweRoztwory[liquidCbox.SelectedItem.ToString()];
-            else if (!string.IsNullOrEmpty(liquidTbox.Text))
-                liquidPercentage = double.Parse(liquidTbox.Text);
+                if (liquidCbox.SelectedItem != null)
+                {
+                    liquidPercentage = TypoweRoztwory[liquidCbox.SelectedItem.ToString()];
+                }
+                else if (!string.IsNullOrEmpty(liquidTbox.Text))
+                {
+                    if (!double.TryParse(liquidTbox.Text, out liquidPercentage))
+                    {
+                        MessageBox.Show("Niepoprawny procent roztworu!");
+                        return;
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("WprowadŸ procent roztworu lub wybierz z listy!");
+                    return;
+                }
 
-            
-            double totalVolume = storageValue * count;
-            double percentageVolume = totalVolume * liquidPercentage / 100;
 
-            res1Box.Text = totalVolume.ToString();
-            res2Box.Text = percentageVolume.ToString();
+                double totalVolume = storageValue * count;
+                double percentageVolume = totalVolume * liquidPercentage / 100;
+
+                res1Box.Text = totalVolume.ToString();
+                res2Box.Text = percentageVolume.ToString();
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Wyst¹pi³ b³¹d: " + ex.Message);
+            }
         }
+
 
         private void storageTbox_TextChanged(object sender, EventArgs e)
         {
             storageCbox.SelectedItem = null;
-            liquidCbox.SelectedItem = null;
+            
         }
 
 
@@ -90,22 +128,21 @@ namespace lab3
 
         private void liquidTbox_TextChanged_1(object sender, EventArgs e)
         {
-            storageCbox.SelectedItem = null;
             liquidCbox.SelectedItem = null;
         }
 
         private void storageCbox_SelectedIndexChanged(object sender, EventArgs e)
         {
+        
             storageTbox.Clear();
-            liquidTbox.Clear();
-            countTbox.Clear();
+          
         }
 
         private void liquidCbox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            storageTbox.Clear();
+         
             liquidTbox.Clear();
-            countTbox.Clear();
+            
         }
     }
 }

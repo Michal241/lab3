@@ -47,22 +47,26 @@
             // 
             // clearBtn
             // 
+            clearBtn.BackColor = Color.FromArgb(248, 247, 255);
+            clearBtn.Font = new Font("Tahoma", 12F, FontStyle.Bold, GraphicsUnit.Point, 238);
             clearBtn.Location = new Point(417, 224);
             clearBtn.Name = "clearBtn";
             clearBtn.Size = new Size(112, 34);
             clearBtn.TabIndex = 1;
             clearBtn.Text = "Wyczyść";
-            clearBtn.UseVisualStyleBackColor = true;
+            clearBtn.UseVisualStyleBackColor = false;
             clearBtn.Click += clearBtn_Click;
             // 
             // calcBtn
             // 
+            calcBtn.BackColor = Color.FromArgb(248, 247, 255);
+            calcBtn.Font = new Font("Tahoma", 12F, FontStyle.Bold, GraphicsUnit.Point, 238);
             calcBtn.Location = new Point(290, 224);
             calcBtn.Name = "calcBtn";
             calcBtn.Size = new Size(112, 34);
             calcBtn.TabIndex = 2;
             calcBtn.Text = "Oblicz";
-            calcBtn.UseVisualStyleBackColor = true;
+            calcBtn.UseVisualStyleBackColor = false;
             calcBtn.Click += calcBtn_Click;
             // 
             // storageTbox
@@ -176,10 +180,12 @@
             // label6
             // 
             label6.AutoSize = true;
+            label6.BorderStyle = BorderStyle.FixedSingle;
             label6.Font = new Font("Constantia", 27.75F, FontStyle.Bold, GraphicsUnit.Point, 238);
-            label6.Location = new Point(86, 9);
+            label6.ForeColor = Color.FromArgb(147, 129, 255);
+            label6.Location = new Point(83, 9);
             label6.Name = "label6";
-            label6.Size = new Size(603, 45);
+            label6.Size = new Size(605, 47);
             label6.TabIndex = 15;
             label6.Text = "《 KAKLULATOR PROCENTOWY 》";
             // 
@@ -187,6 +193,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.FromArgb(255, 216, 190);
             ClientSize = new Size(781, 292);
             Controls.Add(label6);
             Controls.Add(label5);

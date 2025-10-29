@@ -198,17 +198,17 @@
             // panel1
             // 
             panel1.BackColor = Color.FromArgb(181, 141, 182);
-            panel1.Location = new Point(1, 336);
+            panel1.Location = new Point(-6, 336);
             panel1.Name = "panel1";
-            panel1.Size = new Size(826, 18);
+            panel1.Size = new Size(833, 18);
             panel1.TabIndex = 16;
             // 
             // panel2
             // 
             panel2.BackColor = Color.FromArgb(181, 141, 182);
-            panel2.Location = new Point(1, 0);
+            panel2.Location = new Point(-6, 0);
             panel2.Name = "panel2";
-            panel2.Size = new Size(826, 18);
+            panel2.Size = new Size(833, 18);
             panel2.TabIndex = 17;
             // 
             // panel3
@@ -222,9 +222,9 @@
             // panel4
             // 
             panel4.BackColor = Color.FromArgb(181, 141, 182);
-            panel4.Location = new Point(1, 12);
+            panel4.Location = new Point(-6, 12);
             panel4.Name = "panel4";
-            panel4.Size = new Size(23, 329);
+            panel4.Size = new Size(30, 329);
             panel4.TabIndex = 19;
             // 
             // Form1

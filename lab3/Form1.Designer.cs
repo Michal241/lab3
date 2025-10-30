@@ -87,7 +87,6 @@
             liquidTbox.Name = "liquidTbox";
             liquidTbox.Size = new Size(100, 23);
             liquidTbox.TabIndex = 4;
-            liquidTbox.TextChanged += liquidTbox_TextChanged_1;
             // 
             // countTbox
             // 
@@ -95,7 +94,7 @@
             countTbox.Name = "countTbox";
             countTbox.Size = new Size(100, 23);
             countTbox.TabIndex = 5;
-            countTbox.TextChanged += countTbox_TextChanged;
+
             // 
             // res1Box
             // 
@@ -110,7 +109,6 @@
             res2Box.Name = "res2Box";
             res2Box.Size = new Size(100, 23);
             res2Box.TabIndex = 7;
-            res2Box.TextChanged += res2Box_TextChanged;
             // 
             // storageCbox
             // 
